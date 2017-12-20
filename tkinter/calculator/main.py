@@ -63,7 +63,102 @@ class Application:
         }
 
     def _events_bind(self):
-        pass
+        self._operation = None
+        self._components['button_clear'].bind('<Button-1>', self._button_clear_onclick)
+        self._components['button_dig0'].bind('<Button-1>', self._button_dig0_onclick)
+        self._components['button_dig1'].bind('<Button-1>', self._button_dig1_onclick)
+        self._components['button_dig2'].bind('<Button-1>', self._button_dig2_onclick)
+        self._components['button_dig3'].bind('<Button-1>', self._button_dig3_onclick)
+        self._components['button_dig4'].bind('<Button-1>', self._button_dig4_onclick)
+        self._components['button_dig5'].bind('<Button-1>', self._button_dig5_onclick)
+        self._components['button_dig6'].bind('<Button-1>', self._button_dig6_onclick)
+        self._components['button_dig7'].bind('<Button-1>', self._button_dig7_onclick)
+        self._components['button_dig8'].bind('<Button-1>', self._button_dig8_onclick)
+        self._components['button_dig9'].bind('<Button-1>', self._button_dig9_onclick)
+        self._components['button_add'].bind('<Button-1>', self._button_add_onclick)
+        self._components['button_sub'].bind('<Button-1>', self._button_sub_onclick)
+        self._components['button_mul'].bind('<Button-1>', self._button_mul_onclick)
+        self._components['button_div'].bind('<Button-1>', self._button_div_onclick)
+        self._components['button_dot'].bind('<Button-1>', self._button_dot_onclick)
+
+    def _get_entry_result_pos(self):
+        text_len = len(self._components['entry_result'].get())
+        return self._components['entry_result'].index(text_len + 1)
+
+    def _entry_result_append_str(self, sval):
+        cursor_pos = self._get_entry_result_pos()
+        if sval in {'+', '-', '/', '*'}:
+            self._operation = sval
+            self._components['entry_result'].insert(cursor_pos, sval)
+        elif self._operation:
+            val1 = float(self._components['entry_result'].get()[:-1])
+            val2 = float(sval)
+            if self._operation == '+':
+                sval = val1 + val2
+            elif self._operation == '-':
+                sval = val1 - val2
+            elif self._operation == '*':
+                sval = val1 * val2
+            elif self._operation == '/':
+                sval = val1 / val2
+            self._operation = None
+            self._button_clear_onclick(None)
+            self._components['entry_result'].insert(0, str(sval))
+        else:
+            self._operation = None
+            self._components['entry_result'].insert(cursor_pos, sval)
+
+    def _button_clear_onclick(self, event):
+        self._operation = None
+        cursor_pos = self._get_entry_result_pos()
+        self._components['entry_result'].delete(0, cursor_pos)
+
+    def _button_dig0_onclick(self, event):
+        self._entry_result_append_str('0')
+
+    def _button_dig1_onclick(self, event):
+        self._entry_result_append_str('1')
+
+    def _button_dig2_onclick(self, event):
+        self._entry_result_append_str('2')
+
+    def _button_dig3_onclick(self, event):
+        self._entry_result_append_str('3')
+
+    def _button_dig4_onclick(self, event):
+        self._entry_result_append_str('4')
+
+    def _button_dig5_onclick(self, event):
+        self._entry_result_append_str('5')
+
+    def _button_dig6_onclick(self, event):
+        self._entry_result_append_str('6')
+
+    def _button_dig7_onclick(self, event):
+        self._entry_result_append_str('7')
+
+    def _button_dig8_onclick(self, event):
+        self._entry_result_append_str('8')
+
+    def _button_dig9_onclick(self, event):
+        self._entry_result_append_str('9')
+
+    def _button_add_onclick(self, event):
+        self._entry_result_append_str('+')
+
+    def _button_sub_onclick(self, event):
+        self._entry_result_append_str('-')
+
+    def _button_mul_onclick(self, event):
+        self._entry_result_append_str('*')
+
+    def _button_div_onclick(self, event):
+        self._entry_result_append_str('/')
+
+    def _button_dot_onclick(self, event):
+        self._entry_result_append_str('.')
+
+
 
 
 Application()

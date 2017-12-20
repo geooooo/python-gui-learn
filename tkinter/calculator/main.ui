@@ -12,7 +12,6 @@
         <property name="highlightcolor">gray</property>
         <property name="insertofftime">0</property>
         <property name="readonlybackground">white</property>
-        <property name="state">readonly</property>
         <property name="takefocus">false</property>
         <property name="width">24</property>
         <layout>
