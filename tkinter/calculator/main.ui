@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object class="tk.Toplevel" id="Toplevel_main">
+    <property name="height">200</property>
+    <property name="resizable">none</property>
+    <property name="title" translatable="yes">Калькулятор</property>
+    <property name="width">200</property>
+    <child>
+      <object class="tk.Entry" id="Entry_result">
+        <property name="cursor">arrow</property>
+        <property name="font">TkDefaultFont</property>
+        <property name="highlightcolor">gray</property>
+        <property name="insertofftime">0</property>
+        <property name="readonlybackground">white</property>
+        <property name="state">readonly</property>
+        <property name="takefocus">false</property>
+        <property name="width">24</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Frame" id="Frame_buttons">
+        <property name="height">200</property>
+        <property name="padx">5</property>
+        <property name="pady">5</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+        <child>
+          <object class="tk.Button" id="Button_dig1">
+            <property name="height">2</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">1</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_dig2">
+            <property name="height">2</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">2</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_dig3">
+            <property name="height">2</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">3</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_dig4">
+            <property name="height">2</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">4</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_dig5">
+            <property name="height">2</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">5</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_dig6">
+            <property name="height">2</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">6</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_dig7">
+            <property name="height">2</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">7</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_dig8">
+            <property name="height">2</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">8</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_dig9">
+            <property name="height">2</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">9</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_dig0">
+            <property name="height">2</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_dot">
+            <property name="height">2</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">.</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_clear">
+            <property name="foreground">#7b4863</property>
+            <property name="height">2</property>
+            <property name="highlightbackground">#7b4863</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">C</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_add">
+            <property name="foreground">#53587e</property>
+            <property name="height">2</property>
+            <property name="highlightbackground">#53587e</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">+</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_sub">
+            <property name="foreground">#53587e</property>
+            <property name="height">2</property>
+            <property name="highlightbackground">#53587e</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">-</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_mul">
+            <property name="foreground">#53587e</property>
+            <property name="height">2</property>
+            <property name="highlightbackground">#53587e</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">*</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="Button_div">
+            <property name="foreground">#53587e</property>
+            <property name="height">2</property>
+            <property name="highlightbackground">#53587e</property>
+            <property name="justify">center</property>
+            <property name="padx">0</property>
+            <property name="pady">0</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">/</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="padx">2</property>
+              <property name="pady">2</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
