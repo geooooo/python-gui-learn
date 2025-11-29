@@ -1,1 +1,1 @@
-# Эксперименты с GUI библиотеками на Python
+# Experiment with GUI for Python
